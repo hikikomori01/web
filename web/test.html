@@ -1,0 +1,29 @@
+
+// Create a Clndr and save the instance as theCalendarInstance
+var theCalendarInstance = $('#myCalendar').clndr();
+
+// Go to the next month
+theCalendarInstance.forward();
+
+// Go to the previous month
+theCalendarInstance.back();
+
+// Set the month using a number from 0-11 or a month name
+theCalendarInstance.setMonth(0);
+theCalendarInstance.setMonth('February');
+
+// Go to the next year
+theCalendarInstance.nextYear();
+
+// Go to the previous year
+theCalendarInstance.previousYear();
+
+// Set the year
+theCalendarInstance.setYear(1997);
+
+// Change the events. Note that this triggers a re-render of the calendar.
+theCalendarInstance.setEvents(newEventsArray);
+
+// Add events. Note that this triggers a re-render of the calendar.
+theCalendarInstance.addEvents(additionalEventsArray);
+        

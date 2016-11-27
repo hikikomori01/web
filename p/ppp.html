@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta http-equiv="Content-Language" content="th">
+    <meta http-equiv="content-Type" content="text/html; charset=window-874">
+    <meta http-equiv="content-Type" content="text/html; charset=tis-620">
+     <link rel="stylesheet" href="calendar_cs_test.css">
+    <title>Title</title>
+</head>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<body>
+<span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<p id ="ok">ADMIN</p>
+</body>
+
+<div id="form" class="form-group">
+    <select id="opens">
+          <option class="empty" value="empty" selected>ว่าง</option>
+          <option class="full" value="full">เต็ม</option>
+          <option class="event" value="event">EVENT</option>
+    </select>
+    <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">sumit</button>
+</div>
+
+
+<script>
+
+//$(document).ready(function () {
+        $("#opens").click(function () {
+            var ka = $("#opens").val();
+//        $("p").html(ka);
+
+
+            if (ka == "empty") {
+                $("#opens").css("background-color", "greenyellow");
+            }
+            if (ka == "full") {
+                $("#opens").css("background-color", "red");
+            }
+            if (ka == "EVENT") {
+                $("#opens").css("background-color", "#2e6da4");
+            }
+
+        });
+
+//  });
+
+    var pass;
+    var password = 1;
+    pass = prompt("admit ENTER pass");
+
+    if (pass == password) {
+            alert("done");
+            function openNav() {
+                document.getElementById("form").style.width = "200px";
+                $(".form-group").slideUp("500").slideDown("500");
+            }
+
+            function closeNav() {
+                $(".form-group").slideUp("slow");
+            }
+        }
+        else {
+            alert("miss");
+        }
+
+</script>
+</html>
